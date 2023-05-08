@@ -18,7 +18,7 @@ const CardContentWrapper = styled(CardContent)({
   flexGrow: 1,
 });
 
-interface Post {
+export interface PostType {
   title: string,
   content: string,
   timestamp: string,
@@ -28,11 +28,11 @@ interface Post {
 } 
 
 const Posts = () => {
-  const [posts, setPosts] = useState<Post[] | null[]>(Array(6).fill(null));
+  const [posts, setPosts] = useState<PostType[] | null[]>(Array(6).fill(null));
 
   const getPosts = async () => {
     const response = await fetch("https://blog-api-production-c132.up.railway.app/post");
-    const posts: Post[] = await response.json();
+    const posts: PostType[] = await response.json();
     setPosts(posts);
   }
 
@@ -58,7 +58,7 @@ const Posts = () => {
   );
 };
 
-const CardPost = ({ post }: { post: Post }) => {
+const CardPost = ({ post }: { post: PostType }) => {
   return (
     <Grid item xs={12} md={4}>
       <CardWrapper>
