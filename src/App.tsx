@@ -1,7 +1,7 @@
 import './App.css'
 import Posts from './components/Posts';
 import Post from './components/Post';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import HideAppBar from './components/Appbar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -14,13 +14,13 @@ const darkTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={darkTheme} >
-      <BrowserRouter>
+      <HashRouter>
         <HideAppBar />
         <Routes>
           <Route index element={<Posts />}/>
           <Route path='/:postid' element={<Post />}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   )
 }
