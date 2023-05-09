@@ -86,7 +86,7 @@ const Post = () => {
       comment: body,
     };
 
-    const response = await fetch(
+    await fetch(
       `https://blog-api-production-c132.up.railway.app/post/${postid}/comments`, 
       { 
         method: 'POST',

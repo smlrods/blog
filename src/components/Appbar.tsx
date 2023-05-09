@@ -38,7 +38,7 @@ function HideOnScroll(props: Props) {
   );
 }
 
-export default function HideAppBar(props: Props) {
+export default function HideAppBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
