@@ -62,7 +62,7 @@ const CardPost = ({ post }: { post: PostType }) => {
   return (
     <Grid item xs={12} md={4}>
       <CardWrapper>
-        <CardActionArea component={Link} to={post._id}>
+        <CardActionArea component={Link} to={post._id} sx={{height: '100%'}}>
           <CardMediaWrapper
             image="https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2018/04/personagens-de-Steins-Gate-01.jpg?resize=1600%2C1000&ssl=1"
             title="Blog Title"
@@ -72,7 +72,7 @@ const CardPost = ({ post }: { post: PostType }) => {
               {post.title}
             </Typography>
             <Typography>
-              {post.content}
+              {post.content.substring(0, 100) + `${post.content.length < 100 ? '' : '...'}`}
             </Typography>
           </CardContentWrapper>
         </CardActionArea>
