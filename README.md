@@ -1,1 +1,20 @@
-# blog
+# Blog
+
+[Live Demo](https://smlrods.github.io/blog) :point_left:
+
+## Getting started
+
+```
+git clone https://github.com/smlrods/blog.git
+cd blog
+npm install
+npm run dev
+```
+
+## Built with
+
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Material UI](https://mui.com/material-ui/getting-started/overview/)
